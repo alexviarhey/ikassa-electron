@@ -1,0 +1,17 @@
+.outer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+}

@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from "./UI/components/Header";
+import ShiftOpening from "./UI/pages/ShiftOpening/ShiftOpening";
+import {AppContainer} from "./UI/styles/Container";
+import AuthPage from "./UI/pages/AuthPage/AuthPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+
+const App = () => {
+
+
+    return (
+        <>
+            <Header />
+            <AppContainer>
+                <ShiftOpening />
+                {/*<AuthPage />*/}
+            </AppContainer>
+        </>
+    )
+};
+
+
+export default App

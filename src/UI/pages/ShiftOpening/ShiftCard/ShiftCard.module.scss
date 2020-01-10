@@ -1,0 +1,24 @@
+.prev, .time {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+}
+
+.prev {
+  margin: 16px 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+    .img {
+      margin-left: 15px;
+    }
+}
