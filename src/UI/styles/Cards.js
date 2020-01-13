@@ -39,6 +39,15 @@ export const AuthWrapper = styled(BasicCard)`
 `;
 
 
+export const RestorePinCodeCard = styled.div`
+  width: 400px;
+  height: 270px;
+  background: #F3F3F3;
+  padding: 15px 38px 20px;
+`;
+
+
+
 
 
 

@@ -1,8 +1,9 @@
 import React from 'react'
 import {AuthWrapper} from "../../styles/Cards";
-import s from './RegistratioInfo/RegistrationInfo.module.scss'
-import RegistrationInfoContainer from "./RegistratioInfo/RegistrationInfoContainer";
+import s from './RegistrationInfo/RegistrationInfo.module.scss'
+import RegistrationInfoContainer from "./RegistrationInfo/RegistrationInfoContainer";
 import Certificate from "./Certificate/Certificate";
+import AuthorizationBlockContainer from "./AuthorizationBlock/AuthorizatonBlockContainer";
 
 
 const AuthPage = () => {
@@ -12,6 +13,7 @@ const AuthPage = () => {
                 <RegistrationInfoContainer />
                 <Certificate />
             </div>
+            <AuthorizationBlockContainer />
         </AuthWrapper>
     )
 };

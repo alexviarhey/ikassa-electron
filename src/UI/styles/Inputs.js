@@ -10,7 +10,6 @@ export const Input = styled.input`
   line-height: 19px;
   color: #616269;
   text-align: center;
-  margin: 0 auto;  
   transition: .5s;
   &:active, &:focus {
     outline: none;
@@ -29,3 +28,14 @@ export const Input = styled.input`
     transition: .5s;
   }
 `;
+
+export const AuthInput  = styled(Input)`
+   width: 325px;
+   height: 40px;
+`;
+
+export const NewPinCodeInput = styled(Input)`
+   width: 155px;
+   height: 40px;
+`;
+

@@ -1,6 +1,6 @@
 import React from 'react'
 import {BoldSimpleTitle, SimpleTitle, Title} from "../../../styles/CardTitles";
-import s from "../RegistratioInfo/RegistrationInfo.module.scss";
+import s from "../RegistrationInfo/RegistrationInfo.module.scss";
 import {IsValidTitle} from "../styles";
 
 

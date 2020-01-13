@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 
+export const TitleWrapper = styled.div`
+  text-align: center;
+`;
 
 export const Title = styled.div`
-   font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  padding-bottom: 10px;
-   border-bottom: 1px solid ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B' : '#317D8C'};
-  color: ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B' : '#317D8C'}
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B' : '#317D8C'};
+    color: ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B' : '#317D8C'}
+    
 `;
 
 export const SimpleTitle = styled(Title)`
