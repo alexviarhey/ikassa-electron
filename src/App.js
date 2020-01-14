@@ -4,6 +4,7 @@ import {AppContainer} from "./UI/styles/Container";
 import RestorePinCodeBlockContainer from "./UI/pages/RestorePinCodeBlock/RestorePinCodeBlockContainer";
 import AuthPage from "./UI/pages/AuthPage/AuthPage";
 import ShiftOpening from "./UI/pages/ShiftOpening/ShiftOpening";
+import SalePage from "./UI/pages/SalePage/SalePage";
 
 
 
@@ -15,9 +16,10 @@ const App = () => {
         <>
             <Header />
             <AppContainer>
-                <ShiftOpening />
-                {/*<AuthPage />*/}
-                {/*<RestorePinCodeBlockContainer />*/}
+                {/*<ShiftOpening />*/}
+                {/*<AuthPage />
+                <RestorePinCodeBlockContainer />*/}
+                <SalePage />
             </AppContainer>
         </>
     )

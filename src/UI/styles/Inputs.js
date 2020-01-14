@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Input = styled.input`
   width: 341px;
   height: 30px;
-  border: 1px solid #C4C4C4;
+  border: 1px solid ${({error}) => error ? '#F44A4A' :  '#C4C4C4'};
   border-radius: 10px;
   font-family: Roboto,sans-serif;
   font-size: 14px;
@@ -24,7 +24,8 @@ export const Input = styled.input`
   }
    
   &::placeholder {
-    color: #C4C4C4;
+    color: ${({error}) => error ? '#F44A4A' :  '#C4C4C4'};
+    opacity: ${({error}) => error ? '.5' :  '1'};;
     transition: .5s;
   }
 `;

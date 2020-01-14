@@ -17,7 +17,7 @@ const AuthorizationBlock = ({errorMessage, setErrorMessage}) => {
             </TitleWrapper>
             <InputsWrapper>
                 <AuthInput value='AVQ11019990085'/>
-                <AuthInput placeholder='PIN-код' />
+                <AuthInput placeholder='PIN-код' error />
             </InputsWrapper>
             <RestorePinCode errorMessage={errorMessage}/>
             <AuthErrorContainer>

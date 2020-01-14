@@ -18,11 +18,11 @@ const RestorePinCodeBlock = ({errorMessage, setErrorMessage}) => {
                         <Title>Восстановление pin-кода</Title>
                     </TitleWrapper>
                     <PukInputWrapper>
-                        <AuthInput placeholder='Puk-код'/>
+                        <AuthInput error={errorMessage} placeholder='Puk-код'/>
                     </PukInputWrapper>
                     <PinInputWrapper errorMessage={errorMessage}>
-                        <NewPinCodeInput placeholder='Новый pin-код'/>
-                        <NewPinCodeInput placeholder='Повторить pin-код'/>
+                        <NewPinCodeInput error={errorMessage} placeholder='Новый pin-код'/>
+                        <NewPinCodeInput error={errorMessage} placeholder='Повторить pin-код'/>
                     </PinInputWrapper>
                     <AuthErrorContainer>
                         {
