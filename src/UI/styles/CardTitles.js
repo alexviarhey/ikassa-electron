@@ -10,8 +10,9 @@ export const Title = styled.div`
     font-size: 16px;
     line-height: 19px;
     padding-bottom: 10px;
-    border-bottom: 1px solid ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B' : '#317D8C'};
-    color: ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B' : '#317D8C'}
+    border-bottom: 1.5px solid ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B'  : '#317D8C'};
+    color: ${props => props.green ? '#249F55' : props.red ? ' #DA2B2B': props.gray ? '#616269' : '#317D8C'};
+    text-align: center;
     
 `;
 

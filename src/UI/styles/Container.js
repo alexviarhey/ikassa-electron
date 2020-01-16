@@ -6,3 +6,8 @@ export const AppContainer = styled.div`
   height: 540px;
   padding: 20px;
 `;
+
+export const FlexSpaceBetweenContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`

@@ -46,6 +46,25 @@ export const RestorePinCodeCard = styled.div`
   padding: 15px 38px 20px;
 `;
 
+export const ProductsListCard = styled(BasicCard)`
+  width: ${({width}) => width};
+  height: ${({height}) => height};
+  padding: 15px 20px;
+`;
+
+export const PaymentBlockWrapper = styled(BasicCard)`
+  width: 760px;
+  height: 179px;
+  padding: 10px 20px;
+`;
+
+export const ReturnProductWrapper = styled(BasicCard)`
+  width: 290px;
+  height: 375px;
+  padding: 15px 20px 0;
+`;
+
+
 
 
 

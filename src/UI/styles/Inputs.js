@@ -40,3 +40,21 @@ export const NewPinCodeInput = styled(Input)`
    height: 40px;
 `;
 
+export const SearchInput = styled(Input)`
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  line-height: 16px;
+  width: 220px;
+ `;
+
+export const ReturnProductInput = styled(Input)`
+  width: 250px;
+  height: 30px;
+ `;
+
+export const PaymentMethodInput = styled(Input)`
+  width: 120px;
+  height: 30px;
+ `;
+
+

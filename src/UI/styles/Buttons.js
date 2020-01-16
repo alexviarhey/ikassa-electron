@@ -77,3 +77,33 @@ export const PrintOutButton = styled(PaymentButton)`
   
 `;
 
+ export const AddProductButton = styled.button`
+  width: 170px;
+  height: 30px;
+  border: 1px solid #327E8C;
+  border-radius: 2px;
+  background: none;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #327E8C;
+   transition: .3s;
+  
+  &:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+  background: rgba(50, 126, 140, 0.8);
+  transition: .3s;
+  }
+  
+  &:active, &:focus {
+    outline: none;
+  }
+`;
+
+ export const SearchButton = styled(ButtonBasic)`
+   width: 30px;
+   height: 30px;
+   border-radius: 0 10px 10px 0;
+`
+
