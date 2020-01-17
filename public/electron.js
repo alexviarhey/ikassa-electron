@@ -13,8 +13,13 @@ function createWindow () {
         height: 600,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        frame: false
     });
+
+
+
+
 
     // и загрузить index.html приложения.
     win.loadURL(

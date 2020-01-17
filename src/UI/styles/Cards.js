@@ -64,6 +64,24 @@ export const ReturnProductWrapper = styled(BasicCard)`
   padding: 15px 20px 0;
 `;
 
+export const EnterCheckNumberCard = styled(BasicCard)`
+  width: 290px;
+  height: 450px;
+  padding: 15px 20px 0;
+  margin: 0 auto;
+  position: relative;
+`;
+
+export const CheckListCard = styled(BasicCard)`
+  width: 440px;
+  height: 450px;
+  padding: 15px 20px;
+  margin: 0 auto;
+`;
+
+
+
+
 
 
 

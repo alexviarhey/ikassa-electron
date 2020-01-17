@@ -1,22 +1,16 @@
 import React from 'react'
 import {Title} from "../../../styles/CardTitles";
 import {ProductsListCard} from "../../../styles/Cards";
-import {SearchInput} from "../../../styles/Inputs";
-import {ProductListItem, ProductListWrapper, SearchBlockWrapper} from "./product-list-styles";
-
-import check from '../../../../img/check_button.svg'
-import {SearchButton} from "../../../styles/Buttons";
+import {ProductListItem, ProductListWrapper} from "./product-list-styles";
 import {ProductItemAmount, ProductItemName} from "../sale-page-styles";
+import SearchInputBlock from "../../../components/SearchInputBlock";
 
 
 const ProductsList = ({width, height}) => {
     return (
         <ProductsListCard width={width} height={height}>
             <Title>Список товаров</Title>
-            <SearchBlockWrapper>
-                <SearchInput placeholder='Поиск по наименованию'/>
-                <SearchButton><img src={check} alt=""/></SearchButton>
-            </SearchBlockWrapper>
+            <SearchInputBlock placeholder='Поиск по наименованию' />
             <ProductListWrapper>
                 <ProductListItem>
                     <ProductItemName fromList>Хлеб</ProductItemName>

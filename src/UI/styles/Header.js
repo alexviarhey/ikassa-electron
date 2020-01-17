@@ -9,6 +9,8 @@ export const HeaderWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
 `;
 
 
