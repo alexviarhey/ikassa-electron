@@ -66,9 +66,9 @@ export const authMe = (authData) => async (dispatch) => {
 };
 
 export const restorePin = (changePinData) => async (dispatch) => {
-    /*let res = await authApi.changePin(changePinData);
+    let res = await authApi.changePin(changePinData);
     if(res) {
         dispatch(setIsPinChange(true))
-    } */
+    }
         dispatch(setTogglePinChange(false));
 };

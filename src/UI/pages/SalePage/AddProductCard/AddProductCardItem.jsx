@@ -5,7 +5,7 @@ import {
     ProductItemAmount,
     ProductItemName,
     ProductItemNumber,
-    ProductItemSale, ProductsContainer
+    ProductItemSale
 } from "../sale-page-styles";
 
 

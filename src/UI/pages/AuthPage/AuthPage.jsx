@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {AuthWrapper} from "../../styles/Cards";
 import s from './RegistrationInfo/RegistrationInfo.module.scss'
 import RegistrationInfoContainer from "./RegistrationInfo/RegistrationInfoContainer";
