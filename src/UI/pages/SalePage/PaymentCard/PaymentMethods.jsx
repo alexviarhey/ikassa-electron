@@ -10,7 +10,7 @@ import TotalAmount from "./TotalAmount";
 import {PaymentButton} from "../../../styles/Buttons";
 
 
-const PaymentMethods = () => {
+const PaymentMethods = ({amount}) => {
     const [paymentMethod, setPaymentMethod] = useState(null);
 
     const handleSubmit = (e) => {
@@ -35,7 +35,7 @@ const PaymentMethods = () => {
             </RadioInputsWrapper>
 
             <RadioButtonsFormBottomBlock>
-                <TotalAmount />
+                <TotalAmount amount={amount} />
                 <PaymentButton type='submit'>Оплатить</PaymentButton>
             </RadioButtonsFormBottomBlock>
 

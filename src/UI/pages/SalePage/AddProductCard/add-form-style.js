@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const FormContainer = styled.div`
+export const InputsOuter = styled.div`
   padding-left: 20px;
   padding-right: 20px;
    margin-bottom: 10px;
 `;
 
-export const AddProductForm = styled.div`
+export const InputsFormWrapper = styled.div`
   display: flex;
   padding: 5px 0 5px 2px;
   width: 100%;

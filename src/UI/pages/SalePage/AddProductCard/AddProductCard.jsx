@@ -1,17 +1,25 @@
 import React from 'react'
 import {ProductCard} from "../../../styles/Cards";
 import {
-    AddButtonContainer,
     HeaderItem,
     HeaderItemCenter,
     ProductsCardHeader, ProductsContainer, TotalSale, TotalSaleContainer, TotalSaleTitle
 } from "../sale-page-styles";
 import AddProductCardItem from "./AddProductCardItem";
-import {AddProductButton} from "../../../styles/Buttons";
-import {AddInput, AddProductForm, CenterInputsWrapper, FormContainer} from "./add-form-style";
+import AddProductForm from "./AddProductForm";
 
-const AddProductCard = () => {
+
+const AddProductCard = ({addItem, products, deleteItem}) => {
+
+    const productList = products.map((p, i) => (
+        <AddProductCardItem deleteItem={deleteItem} key={i} product={p}/>
+    ));
+
+    const totalSale = products.map(p => parseFloat(p.sale.replace(',', '.'))).reduce((a, i) => a + i, 0);
+
+
     return (
+
         <ProductCard>
             <ProductsCardHeader>
                 <HeaderItem>Наименование</HeaderItem>
@@ -22,27 +30,12 @@ const AddProductCard = () => {
                 <HeaderItem>Сумма</HeaderItem>
             </ProductsCardHeader>
             <ProductsContainer>
-                <AddProductCardItem/>
-                <AddProductCardItem/>
-                <AddProductCardItem/>
-                <AddProductCardItem/>
+                {productList}
             </ProductsContainer>
-            <FormContainer>
-                <AddProductForm>
-                    <AddInput placeholder='Название'/>
-                    <CenterInputsWrapper>
-                        <AddInput placeholder='0'/>
-                        <AddInput placeholder='0%'/>
-                    </CenterInputsWrapper>
-                    <AddInput noBorder placeholder='0 BYN'/>
-                </AddProductForm>
-            </FormContainer>
-            <AddButtonContainer>
-                <AddProductButton>Добавить товар</AddProductButton>
-            </AddButtonContainer>
+            <AddProductForm addItem={addItem} />
             <TotalSaleContainer>
                 <TotalSaleTitle>Общая скидка</TotalSaleTitle>
-                <TotalSale>0%</TotalSale>
+                <TotalSale>{totalSale}%</TotalSale>
             </TotalSaleContainer>
         </ProductCard>
     )

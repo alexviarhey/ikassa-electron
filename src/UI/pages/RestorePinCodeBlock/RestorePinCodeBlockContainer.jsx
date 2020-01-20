@@ -1,22 +1,19 @@
-import React, {useState} from 'react'
+import React from 'react'
 import RestorePinCodeBlock from "./RestorePinCodeBlock";
+import {useDispatch} from "react-redux";
+import {restorePin} from "../../../BLL/reducers/auth-reducer";
 
 
 const RestorePinCodeBlockContainer = () => {
 
-    const [errorMessage, setErrorMessage] = useState(false);
-
-    const setError = () => {
-        if (errorMessage) {
-            setErrorMessage(false)
-        } else {
-            setErrorMessage(true)
-        }
+    const dispatch = useDispatch();
+    const confirmChangePin = (changePinData) => {
+        dispatch(restorePin(changePinData))
     };
 
 
     return (
-        <RestorePinCodeBlock errorMessage={errorMessage} setErrorMessage={setError}/>
+        <RestorePinCodeBlock confirmChangePin={confirmChangePin}  />
     )
 };
 

@@ -50,7 +50,7 @@ export const ProductsContainer = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 5px;
-  height: 120px;
+  max-height: 120px;
   overflow: auto;
  `;
 
@@ -161,12 +161,12 @@ export const TotalSaleTitle= styled(HeaderItem)`
 export const TotalSale = styled.div`
   width: 60px;
   height: 25px;
-  border: 1px solid #C4C4C4;
+  border: 1px solid #616269;
   border-radius: 10px;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: #C4C4C4;
+  color: #616269;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -2,10 +2,12 @@ import React from 'react'
 import {RestorePinCodeLink} from "../styles";
 
 
-const RestorePinCode = ({errorMessage}) => {
+const RestorePinCode = ({errorMessage, openRestorePinBlock}) => {
     return (
         <>
-            <RestorePinCodeLink errorMessage={errorMessage}>Восстановить pin-код</RestorePinCodeLink>
+            <RestorePinCodeLink onClick={openRestorePinBlock} errorMessage={errorMessage}>
+                Восстановить pin-код
+            </RestorePinCodeLink>
         </>
     )
 };

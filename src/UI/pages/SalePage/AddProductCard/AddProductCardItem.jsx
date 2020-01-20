@@ -9,7 +9,7 @@ import {
 } from "../sale-page-styles";
 
 
-const AddProductCardItem = () => {
+const AddProductCardItem = ({product, deleteItem}) => {
 
     const [isSelected, setIsSelected] = useState(false);
     const handleSetIsSelected = () => {
@@ -18,14 +18,14 @@ const AddProductCardItem = () => {
     return (
         <>
             <Product isSelected={isSelected} onClick={handleSetIsSelected}>
-                <ProductItemName>Хлеб</ProductItemName>
+                <ProductItemName>{product.name}</ProductItemName>
                 <HeaderItem>
-                    <ProductItemNumber>1</ProductItemNumber>
-                    <ProductItemSale>0%</ProductItemSale>
+                    <ProductItemNumber>{product.number}</ProductItemNumber>
+                    <ProductItemSale>{product.sale}{product.sale.indexOf('%') < 0 && <span>%</span>}</ProductItemSale>
                 </HeaderItem>
                 <ProductItemAmount>
-                    <span>547,59 BYN</span>
-                    <DeleteIcon isSelected={isSelected}/>
+                    <span>{product.amount} BYN</span>
+                    <DeleteIcon onClick={() => deleteItem(product.id)} isSelected={isSelected}/>
                 </ProductItemAmount>
             </Product>
         </>

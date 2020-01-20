@@ -4,11 +4,11 @@ import {Title} from "../../../styles/CardTitles";
 import PaymentMethods from "./PaymentMethods";
 
 
-const PaymentCard = () => {
+const PaymentCard = ({amount}) => {
     return (
         <PaymentBlockWrapper>
             <Title>Оплата</Title>
-            <PaymentMethods />
+            <PaymentMethods amount={amount} />
         </PaymentBlockWrapper>
     )
 };

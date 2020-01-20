@@ -18,14 +18,19 @@ export const InputsWrapper = styled.div`
 
 
 export const RestorePinCodeLink = styled.div`
+  
+  text-align: right;
+  margin-bottom: ${(props) => !props.errorMessage ? '61px;' : '25px;'};
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-decoration-line: underline;
   color: #4582B0;
-  text-align: right;
-  margin-bottom: ${(props) => !props.errorMessage ? '61px;' : '25px;'}
+  &:hover {
+    cursor: pointer;
+  }
+  
 `;
 
 export const AuthErrorContainer = styled.div`
@@ -34,13 +39,6 @@ export const AuthErrorContainer = styled.div`
   align-items: center;
 `;
 
-/*export const AuthErrorMessage = styled.div`
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  color: #F44A4A;
-  margin-bottom: 20px;
-`;*/
 
 
 

@@ -5,10 +5,11 @@ const DELETE_PRODUCT = 'productReducer/DELETE_PRODUCT';
 
 const initialState = {
     products: [
-        {id: 0, name: 'Хлеб', number: 1, sake: '10%', amount: '3,34 BYN'},
-        {id: 1, name: 'Батон', number: 1, sake: '0%', amount: '2,89 BYN'},
-        {id: 2, name: 'Виски', number: 1, sake: '0%', amount: '1,68 BYN'},
-    ]
+        {id: 0, name: 'Хлеб', number: 1, sale: '10', amount: '3,34'},
+        {id: 1, name: 'Батон', number: 1, sale: '20', amount: '2,89'},
+        {id: 2, name: 'Виски', number: 1, sale: '0,5', amount: '1,68'},
+    ],
+    id: 3
 };
 
 
@@ -17,12 +18,13 @@ export const productReducer = (state=initialState, action) => {
         case ADD_PRODUCT:
             return {
                 ...state,
-                ...action.product
+                products: [...state.products, action.product],
+                id: state.id + 1
             };
         case DELETE_PRODUCT:
             return {
                 ...state,
-                products: state.products.filter(p => p.id === action.productId)
+                products: state.products.filter(p => p.id !== action.productId)
             };
         default: return state
     }
@@ -30,6 +32,7 @@ export const productReducer = (state=initialState, action) => {
 
 
 export const addProduct = (product) => {
+    debugger
     return {type: ADD_PRODUCT, product}
 };
 

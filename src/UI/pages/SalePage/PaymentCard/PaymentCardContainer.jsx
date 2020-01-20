@@ -2,9 +2,12 @@ import React from 'react'
 import PaymentCard from "./PaymentCard";
 
 
-const PaymentCardContainer = () => {
+const PaymentCardContainer = ({products}) => {
+
+    const amount = products.map(p => +p.amount.replace(',', '.')).reduce((a, i) => a + i, 0);
+    console.log(amount);
     return (
-        <PaymentCard />
+        <PaymentCard amount={amount} />
     )
 };
 

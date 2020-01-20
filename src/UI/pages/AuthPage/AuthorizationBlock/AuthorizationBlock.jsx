@@ -5,9 +5,10 @@ import {AuthInput} from "../../../styles/Inputs";
 import RestorePinCode from "./RestorePinCode";
 import {ButtonBasic} from "../../../styles/Buttons";
 import {AuthErrorMessage} from "../../../styles/auth-erros";
+import AuthForm from "./AuthForm";
 
 
-const AuthorizationBlock = ({errorMessage, setErrorMessage}) => {
+const AuthorizationBlock = ({onClickHandler, authError, openRestorePinBlock}) => {
     console.log('render');
     return (
 
@@ -15,21 +16,7 @@ const AuthorizationBlock = ({errorMessage, setErrorMessage}) => {
             <TitleWrapper>
                 <Title>Авторизация</Title>
             </TitleWrapper>
-            <InputsWrapper>
-                <AuthInput value='AVQ11019990085'/>
-                <AuthInput placeholder='PIN-код' error />
-            </InputsWrapper>
-            <RestorePinCode errorMessage={errorMessage}/>
-            <AuthErrorContainer>
-                {
-                    errorMessage && <AuthErrorMessage marginBottom='20px'>Введён неверный Pin-код</AuthErrorMessage>
-                }
-                <ButtonBasic onClick={() => {
-                    if(errorMessage) {
-                        setErrorMessage(false)
-                    } else {setErrorMessage(true) }
-                }}>Войти</ButtonBasic>
-            </AuthErrorContainer>
+            <AuthForm  openRestorePinBlock={openRestorePinBlock} onClickHandler={onClickHandler}  authError={authError}/>
         </>
    )
 };

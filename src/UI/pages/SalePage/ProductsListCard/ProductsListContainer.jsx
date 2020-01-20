@@ -3,10 +3,12 @@ import ProductsList from "./ProductsList";
 import {FlexSpaceBetweenContainer} from "../../../styles/Container";
 
 
-const ProductsListContainer = ({width, height}) => {
+
+const ProductsListContainer = ({width, height, products}) => {
+
     return (
         <FlexSpaceBetweenContainer>
-            <ProductsList width={width} height={height} />
+            <ProductsList products={products} width={width} height={height} />
         </FlexSpaceBetweenContainer>
 
     )
